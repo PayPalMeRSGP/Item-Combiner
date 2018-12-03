@@ -28,8 +28,9 @@ For example, When interacting with the widget to confirm to combine items, there
 - PrematureStop (6.25%; 10/160): interact with widget, right click hover the bank, before all items have combined, click to open the bank canceling combining the remaining items. This is meant to simulate a EHP player mistiming the game ticks. 
 
 Percentages are calculated from relative probability weights I've set. The following line defines the above branch probabilities.
+
+Item-Combiner/src/nodes/bankingnodes/withdraw/Withdraw.java
 ```
-//Item-Combiner/src/nodes/bankingnodes/withdraw/Withdraw.java
 private List<Edge> bothItemsWithdrawn = Arrays.asList(
             new Edge(AFKCreation.class, 100),
             new Edge(HoverBankerCreation.class, 50),
