@@ -2,14 +2,10 @@
 Osbot script designed to automate any 2 item combination action. 
 
 Common use cases: 
-
--stringing bows 
-
--creating unf potions 
-
--finishing potions 
-
--doing hosidious favor by making those special compost
+- stringing bows 
+- creating unf potions 
+- finishing potions 
+- doing hosidious favor by making those special compost
 
  
 # Usage Instructions
