@@ -27,9 +27,11 @@ public class MarkovNodeExecutor {
      */
     public int executeThenTraverse() throws InterruptedException {
         int onLoopSleepTime = 500;
+        current.logNode();
         if(current.canExecute()){
             onLoopSleepTime = current.executeNode();
         }
+
         normalTraverse();
         return onLoopSleepTime;
     }

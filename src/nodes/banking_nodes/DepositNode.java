@@ -1,10 +1,10 @@
-package nodes.bankingnodes;
+package nodes.banking_nodes;
 
 
 import nfa.Edge;
 import nfa.ExecutableNode;
-import nodes.bankingnodes.withdraw.WithdrawPrimary;
-import nodes.bankingnodes.withdraw.WithdrawSecondary;
+import nodes.banking_nodes.withdraw.WithdrawPrimary;
+import nodes.banking_nodes.withdraw.WithdrawSecondary;
 import org.osbot.rs07.Bot;
 import org.osbot.rs07.api.model.NPC;
 import org.osbot.rs07.api.ui.Option;

@@ -25,7 +25,7 @@ public class Paint implements Painter {
     @Override
     public void onPaint(Graphics2D g) {
         drawRuntime(g);
-        drawMouse(g);
+        //drawMouse(g);
     }
 
     public static void incrementAmtCombined(Graphics2D g) {

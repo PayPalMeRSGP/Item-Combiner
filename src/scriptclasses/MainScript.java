@@ -1,12 +1,12 @@
 package scriptclasses;
 
 import nfa.MarkovNodeExecutor;
-import nodes.bankingnodes.DepositNode;
-import nodes.bankingnodes.withdraw.WithdrawPrimary;
-import nodes.bankingnodes.withdraw.WithdrawSecondary;
-import nodes.creationNodes.AFKCreation;
-import nodes.creationNodes.HoverBankerCreation;
-import nodes.creationNodes.PrematureStopCreation;
+import nodes.banking_nodes.DepositNode;
+import nodes.banking_nodes.withdraw.WithdrawPrimary;
+import nodes.banking_nodes.withdraw.WithdrawSecondary;
+import nodes.creation_nodes.AFKCreation;
+import nodes.creation_nodes.HoverBankerCreation;
+import nodes.creation_nodes.PrematureStopCreation;
 import org.osbot.rs07.api.model.Item;
 import org.osbot.rs07.api.ui.Message;
 import org.osbot.rs07.listener.MessageListener;

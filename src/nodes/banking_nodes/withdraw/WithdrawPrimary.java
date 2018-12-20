@@ -1,9 +1,9 @@
-package nodes.bankingnodes.withdraw;
+package nodes.banking_nodes.withdraw;
 
 import nfa.Edge;
-import nodes.creationNodes.AFKCreation;
-import nodes.creationNodes.HoverBankerCreation;
-import nodes.creationNodes.PrematureStopCreation;
+import nodes.creation_nodes.AFKCreation;
+import nodes.creation_nodes.HoverBankerCreation;
+import nodes.creation_nodes.PrematureStopCreation;
 import org.osbot.rs07.Bot;
 import scriptclasses.TodaysRecipe;
 
@@ -37,7 +37,7 @@ public class WithdrawPrimary extends Withdraw {
 
     @Override
     public List<Edge> getAdjacentNodes() {
-        boolean hasSecondary = inventory.contains(TodaysRecipe.getPrimaryID(), TodaysRecipe.getSecondaryID());
+        boolean hasSecondary = inventory.contains(TodaysRecipe.getSecondaryID());
         return hasSecondary ? readyToCreate : stillNeedSecondary;
     }
 }

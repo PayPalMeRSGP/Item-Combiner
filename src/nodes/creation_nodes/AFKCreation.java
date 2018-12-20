@@ -1,4 +1,4 @@
-package nodes.creationNodes;
+package nodes.creation_nodes;
 
 import org.osbot.rs07.Bot;
 import org.osbot.rs07.utility.ConditionalSleep;

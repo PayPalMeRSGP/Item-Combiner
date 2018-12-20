@@ -1,8 +1,8 @@
-package nodes.creationNodes;
+package nodes.creation_nodes;
 
 import nfa.Edge;
 import nfa.ExecutableNode;
-import nodes.bankingnodes.DepositNode;
+import nodes.banking_nodes.DepositNode;
 import org.osbot.rs07.Bot;
 import org.osbot.rs07.api.model.Item;
 import org.osbot.rs07.api.ui.RS2Widget;

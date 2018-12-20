@@ -1,10 +1,10 @@
-package nodes.bankingnodes.withdraw;
+package nodes.banking_nodes.withdraw;
 
 import nfa.Edge;
 import nfa.ExecutableNode;
-import nodes.creationNodes.AFKCreation;
-import nodes.creationNodes.HoverBankerCreation;
-import nodes.creationNodes.PrematureStopCreation;
+import nodes.creation_nodes.AFKCreation;
+import nodes.creation_nodes.HoverBankerCreation;
+import nodes.creation_nodes.PrematureStopCreation;
 import org.osbot.rs07.Bot;
 import org.osbot.rs07.api.Bank;
 import org.osbot.rs07.script.MethodProvider;
