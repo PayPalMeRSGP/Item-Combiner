@@ -1,0 +1,100 @@
+import java.util.HashMap;
+import java.util.HashSet;
+
+public class Main {
+    public static void main(String[] args) {
+
+    }
+
+    public HashMap<Integer, Integer> restoreInventory(HashMap<Integer, Integer> startingInv, HashMap<Integer, Integer> currentInv) {
+        HashSet<Integer> allItems = new HashSet<>();
+        allItems.addAll(startingInv.keySet());
+        allItems.addAll(currentInv.keySet());
+        HashMap<Integer, Integer> withdrawManifest = new HashMap<>();
+        for(Integer item: allItems) {
+            if(startingInv.containsKey(item)) {
+                int withdrawAmt = startingInv.get(item) - currentInv.getOrDefault(item, 0);
+                if(withdrawAmt > 0) {
+                    withdrawManifest.put(item, withdrawAmt);
+                }
+            } else if(currentInv.containsKey(item)) {
+                withdrawManifest.put(item, -currentInv.get(item));
+            }
+        }
+
+        return withdrawManifest;
+    }
+}
+
+
+
+import org.junit.Test;
+
+
+import java.util.HashMap;
+
+import static org.junit.Assert.*;
+
+public class MainTest{
+
+    @Test
+    public void testRestoreInventory0() {
+        Main test = new Main();
+        HashMap<Integer, Integer> startingInvItems = new HashMap<>();
+        startingInvItems.put(1, 1);
+        startingInvItems.put(2, 27);
+
+        HashMap<Integer, Integer> currentInvItems = new HashMap<>();
+        currentInvItems.put(1, 1);
+        currentInvItems.put(100, 27);
+
+        HashMap<Integer, Integer> expected = new HashMap<>();
+        expected.put(100, -27);
+        expected.put(2, 27);
+
+        HashMap<Integer, Integer> result = test.restoreInventory(startingInvItems, currentInvItems);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testRestoreInventory1() {
+        Main test = new Main();
+        HashMap<Integer, Integer> startingInvItems = new HashMap<>();
+        startingInvItems.put(0, 1);
+        startingInvItems.put(1, 1);
+        startingInvItems.put(2, 26);
+
+        HashMap<Integer, Integer> currentInvItems = new HashMap<>();
+        currentInvItems.put(0, 1);
+        currentInvItems.put(1, 1);
+        currentInvItems.put(100, 26);
+
+        HashMap<Integer, Integer> expected = new HashMap<>();
+        expected.put(100, -26);
+        expected.put(2, 26);
+
+        HashMap<Integer, Integer> result = test.restoreInventory(startingInvItems, currentInvItems);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testRestoreInventory2() {
+        Main test = new Main();
+        HashMap<Integer, Integer> startingInvItems = new HashMap<>();
+        startingInvItems.put(1, 14);
+        startingInvItems.put(2, 14);
+
+        HashMap<Integer, Integer> currentInvItems = new HashMap<>();
+        currentInvItems.put(3, 14);
+
+        HashMap<Integer, Integer> expected = new HashMap<>();
+        expected.put(3, -14);
+        expected.put(1, 14);
+        expected.put(2, 14);
+
+        HashMap<Integer, Integer> result = test.restoreInventory(startingInvItems, currentInvItems);
+        assertEquals(expected, result);
+    }
+
+
+}
